@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install -y wget xz-utils build-essential && \
     ln -s /opt/arduino-${ARDUINO_IDE_VERSION}/arduino-builder /usr/local/bin/ && \
     ln -s /opt/arduino-${ARDUINO_IDE_VERSION} /opt/arduino
 
-ENTRYPOINT [ "bash" ]
+ENTRYPOINT [ "bash", "-c" ]
