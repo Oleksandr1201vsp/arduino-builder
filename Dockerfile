@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y Xvfb wget xz-utils build-essential ctag
     ln -s /opt/arduino-${ARDUINO_IDE_VERSION}/arduino-builder /usr/local/bin/ && \
     ln -s /opt/arduino-${ARDUINO_IDE_VERSION} /opt/arduino && \
     /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16 && \
-    arduino --install-boards "arduino:sam" && \
+    arduino --install-boards "arduino:sam:1.6.10" && \
     /sbin/start-stop-daemon --stop --quiet --pidfile /tmp/custom_xvfb_1.pid && \
     apt-get remove -y Xvfb && \
     apt-get autoremove -y && \
